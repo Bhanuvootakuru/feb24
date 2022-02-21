@@ -1,0 +1,37 @@
+<p>home works!</p>
+
+<h1>{{title}}</h1>
+
+<div>Days:
+    <select (change) = "selectdays($event)" name = "day">
+        <option *ngFor = "let day of days">{{day}}</option>
+    </select>
+</div>
+<br/>
+
+<div>
+    <span *ngIf="isavailable; then condition1 else condition2">condition is valid.</span>
+    <ng-template #condition1>condition is invalid</ng-template>
+    <ng-template #condition2>condition is true</ng-template>
+    
+</div>
+<p><button (click) = "onClickFunction($event)">submit</button></p>
+<p>
+    <button (click)="selectdays($event)">Click Me</button>
+</p>
+<p>{{todaydate}}</p>
+
+<form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)">
+    
+        <input type="text" name = "emailid" placeholder="emailid" ngModel>
+        <br/>
+    
+        <input type="text" name="password" placeholder="password" ngModel>
+        <br/>
+    
+        <input type="submit" value ="submit">
+    </form>
+
+
+
+

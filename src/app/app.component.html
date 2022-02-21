@@ -1,0 +1,15 @@
+<nav>
+    <a [routerLink]="[ '/home']">home</a>
+    <a [routerLink]="[ '/Contact-us']">contact-us</a>
+    <a [routerLink]="[ '/Profile']">profile</a>
+</nav>
+<h3>Users data</h3>
+<ul>
+    <li *ngFor = "let item of persondata; let i =index">
+        {{item.name}}
+
+    </li>
+</ul>
+
+
+<router-outlet></router-outlet>
